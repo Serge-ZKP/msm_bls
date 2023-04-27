@@ -1,0 +1,21 @@
+[package]
+name = "msm_bls"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ark-ff = { version= "0.4.0", features = [ "asm", "parallel" ]}
+ark-std = { version = "0.4.0", default-features = false }
+ark-ec = { version= "0.4.0", features =[ "parallel" ] }
+num-bigint = "0.4"
+derivative = { version = "2", features = ["use_core"] }
+ark-serialize-derive = "0.4.0"
+ark-serialize ="0.4.0"
+threadpool = "1.8.1"
+rayon = "1.6.1"
+
+
+[dev-dependencies]
+ark-test-curves = { version = "0.4.2", default-features = false, features = [ "bls12_381_curve", "mnt6_753", "secp256k1"] }
